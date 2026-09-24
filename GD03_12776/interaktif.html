@@ -14,6 +14,10 @@
     <input type="text" id="inputNama" placeholder="Nama kamu">
     <button onclick="tampilkanNama()">Tampilkan</button>
 
+    <input type="number" id="inputAngka" placeholder="Kuardratkan angka">
+    <button onclick="kuadratkanAngka()">Kuadratkan</button>
+    <p id="hasilKuadrat"></p>
+
     <script>
         const judul = document.getElementById("judulHalaman");
         judul.style.color = "red";
@@ -36,6 +40,12 @@
             } else {
                 alert("Halo, " + nama + "!");
             }
+        }
+
+        function kuadratkanAngka() {
+            const angka = document.getElementById("inputAngka").value;
+            const hasil = angka * angka;
+            document.getElementById("hasilKuadrat").innerText = "Hasil kuadrat: " + hasil;
         }
 
     </script>
