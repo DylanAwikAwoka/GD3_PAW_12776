@@ -10,6 +10,10 @@
     <a href="profil.html">Ke Profil</a> |
     <a href="form.html">Ke Form</a>
 
+    <h2>Dialog Box</h2>
+    <input type="text" id="inputNama" placeholder="Nama kamu">
+    <button onclick="tampilkanNama()">Tampilkan</button>
+
     <script>
         const judul = document.getElementById("judulHalaman");
         judul.style.color = "red";
@@ -22,6 +26,16 @@
 
         function ubahBiru() {
             document.getElementById("teks").style.color = "blue";
+        }
+
+        function tampilkanNama() {
+            const nama = document.getElementById("inputNama").value;
+
+            if (nama === "") {
+                alert("Silakan isi nama dulu.");
+            } else {
+                alert("Halo, " + nama + "!");
+            }
         }
 
     </script>
