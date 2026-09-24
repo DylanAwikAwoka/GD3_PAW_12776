@@ -7,7 +7,43 @@
 </head>
 <body>
     <h1>Form Pendaftaran</h1>
-    <a href="form.html">Ke Halaman Form</a>
     <a href="profil.html">Kembali ke Profil</a>
+
+    <form action="#" method="post">
+        <p>
+            <label for="inputNama">Nama:</label>
+            <input type="text" id="inputNama" name="nama" placeholder="Nama Lengkap" required maxlength="50">
+        </p>
+
+        <p>
+            Jenis Kelamin:
+            <input type="radio" id="lakiLaki" name="jenisKelamin" value="Laki-laki" required>
+            <label for="lakiLaki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="jenisKelamin" value="Perempuan">
+            <label for="perempuan">Perempuan</label>
+        </p>
+
+        <p>
+            <label for="prodi">Program Studi:</label>
+            <select id="prodi" name="prodi" required>
+                <option value="">-- Pilih --</option>
+                <option value="Informatika">Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Industri">Teknik Industri</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+        </p>
+
+        <p>
+            <label for="alasan">Alasan Mendaftar:</label><br>
+            <textarea id="alasan" name="alasan" rows="4" cols="40" placeholder="Tulis alasanmu di sini" required></textarea>
+        </p>
+
+        <input type="submit" value="Kirim">
+    </form>
 </body>
 </html>
