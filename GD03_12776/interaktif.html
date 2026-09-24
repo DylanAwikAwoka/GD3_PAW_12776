@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
+    <a href="profil.html">Ke Profil</a> |
+    <a href="form.html">Ke Form</a>
+
+    <h2>Dialog Box</h2>
+    <input type="text" id="inputNama" placeholder="Nama kamu">
+    <button onclick="tampilkanNama()">Tampilkan</button>
+
+    <script>
+        const judul = document.getElementById("judulHalaman");
+        judul.style.color = "red";
+        console.log(judul.innerHTML);
+        
+        function sapa(nama) {
+            return "Halo, " + nama + "!";
+        }
+        console.log(sapa("Dylan"));
+
+        function ubahBiru() {
+            document.getElementById("teks").style.color = "blue";
+        }
+
+        function tampilkanNama() {
+            const nama = document.getElementById("inputNama").value;
+
+            if (nama === "") {
+                alert("Silakan isi nama dulu.");
+            } else {
+                alert("Halo, " + nama + "!");
+            }
+        }
+
+    </script>
+    <h2>Ubah Warna Teks</h2>
+    <p id="teks">Teks ini bisa berubah!</p>
+    <button onclick="ubahBiru()">Ubah ke Biru</button>
+</body>
+</html>

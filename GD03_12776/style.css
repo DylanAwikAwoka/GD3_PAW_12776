@@ -1,0 +1,51 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+#judul {
+    color: green;
+    text-align: center;
+}
+
+.bio {
+    color: #444;
+    font-style: italic;
+}
+
+p.bio {
+    color: #444;
+    font-style: italic;
+}
+
+.kontainer-profil {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .kontainer-profil {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+.kontainer-foto {
+    position: relative;
+}
+
+.label-baru {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
