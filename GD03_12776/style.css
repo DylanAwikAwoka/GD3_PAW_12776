@@ -39,3 +39,13 @@ p.bio {
         font-size: 12px;
     }
 }
+
+.kontainer-foto {
+    position: relative;
+}
+
+.label-baru {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
