@@ -1,51 +1,202 @@
+/* ===== Palet warna: hijau navy, putih tulang, abu ===== */
+:root {
+    --navy-hijau: #14343a;
+    --hijau: #2f5d50;
+    --tulang: #f4efe4;
+    --tulang-gelap: #e8e2d3;
+    --abu: #8c8f8a;
+    --abu-terang: #d6d3ca;
+    --teks: #1f2a2c;
+}
+
+/* ===== Dasar ===== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: var(--tulang);
+    color: var(--teks);
+    line-height: 1.6;
 }
 
 h1 {
-    color: navy;
+    color: var(--navy-hijau);
     text-align: center;
 }
 
 #judul {
-    color: green;
+    color: var(--navy-hijau);
     text-align: center;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--hijau);
+    border-bottom: 2px solid var(--abu-terang);
+    padding-bottom: 4px;
+    margin-top: 32px;
+}
+
+a {
+    color: var(--hijau);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--navy-hijau);
+    text-decoration: underline;
+}
+
+/* ===== Bio (selector class + elemen) ===== */
+p.bio {
+    color: #4a4f4c;
+    font-style: italic;
+    margin: 2px 0;
 }
 
 .bio {
-    color: #444;
+    color: #4a4f4c;
     font-style: italic;
 }
 
-p.bio {
-    color: #444;
-    font-style: italic;
-}
-
+/* ===== Profil: foto bintang di tengah ===== */
 .kontainer-profil {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-}
-
-@media (max-width: 600px) {
-    .kontainer-profil {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    table {
-        font-size: 12px;
-    }
+    gap: 16px;
+    text-align: center;
+    background-color: #fbf8f1;
+    border: 1px solid var(--abu-terang);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(20, 52, 58, 0.15);
 }
 
 .kontainer-foto {
     position: relative;
 }
 
+.foto-bintang {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+        50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+}
+
 .label-baru {
     position: absolute;
     top: 8px;
     right: 8px;
+    background-color: var(--hijau);
+    color: var(--tulang);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.nama-profil {
+    margin: 0 0 4px;
+    border-bottom: none;
+    color: var(--navy-hijau);
+}
+
+/* ===== Daftar ===== */
+ul, ol {
+    background-color: #fbf8f1;
+    border-left: 4px solid var(--hijau);
+    padding: 12px 12px 12px 36px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* ===== Tabel ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fbf8f1;
+}
+
+th, td {
+    border: 1px solid var(--abu-terang);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--navy-hijau);
+    color: var(--tulang);
+}
+
+tr:nth-child(even) td {
+    background-color: var(--tulang-gelap);
+}
+
+/* ===== Form dan input ===== */
+form {
+    background-color: #fbf8f1;
+    border: 1px solid var(--abu-terang);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(20, 52, 58, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    padding: 8px;
+    border: 1px solid var(--abu);
+    border-radius: 6px;
+    background-color: #fff;
+    max-width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--hijau);
+}
+
+/* ===== Tombol ===== */
+button,
+input[type="submit"] {
+    background-color: var(--navy-hijau);
+    color: var(--tulang);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--hijau);
+}
+
+/* ===== Responsive (tetap paling bawah) ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .foto-bintang {
+        width: 170px;
+        height: 170px;
+    }
+
+    table {
+        font-size: 12px;
+    }
 }
